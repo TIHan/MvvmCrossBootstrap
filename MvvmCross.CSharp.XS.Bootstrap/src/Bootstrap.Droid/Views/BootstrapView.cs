@@ -2,10 +2,11 @@ namespace Bootstrap.Droid.Views
 {
 	using Android.App;
 	using Cirrious.MvvmCross.Droid.Views;
+	using Cirrious.MvvmCross.Binding.BindingContext;
 	using Bootstrap.Core;
 
 	[Activity (Label = "Bootstrap", MainLauncher = true)]
-	public class TipView : MvxActivity
+	public class BootstrapView : MvxActivity
 	{
 		public new BootstrapViewModel ViewModel
 		{

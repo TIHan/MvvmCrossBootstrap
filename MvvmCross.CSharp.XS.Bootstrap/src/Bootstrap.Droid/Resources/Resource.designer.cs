@@ -75,11 +75,11 @@ namespace Bootstrap.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f040001
+			public const int Click = 2130968577;
+			
 			// aapt resource value: 0x7f040000
 			public const int MvxBindingTagUnique = 2130968576;
-			
-			// aapt resource value: 0x7f040001
-			public const int button1 = 2130968577;
 			
 			static Id()
 			{

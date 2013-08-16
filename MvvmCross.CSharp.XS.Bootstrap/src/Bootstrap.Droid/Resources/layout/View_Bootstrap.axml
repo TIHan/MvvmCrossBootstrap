@@ -7,8 +7,9 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <Button
-        android:text="MvvmCross Button"
+        android:text=""
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:id="@+id/Click"
+        local:MvxBind="Click ClickCommand;Text ClickText" />
 </LinearLayout>
