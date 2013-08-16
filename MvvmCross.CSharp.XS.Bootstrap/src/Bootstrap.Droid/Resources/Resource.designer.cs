@@ -31,6 +31,21 @@ namespace Bootstrap.Droid
 		public partial class Attribute
 		{
 			
+			// aapt resource value: 0x7f010000
+			public const int MvxBind = 2130771968;
+			
+			// aapt resource value: 0x7f010003
+			public const int MvxDropDownItemTemplate = 2130771971;
+			
+			// aapt resource value: 0x7f010002
+			public const int MvxItemTemplate = 2130771970;
+			
+			// aapt resource value: 0x7f010001
+			public const int MvxLang = 2130771969;
+			
+			// aapt resource value: 0x7f010004
+			public const int MvxSource = 2130771972;
+			
 			static Attribute()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -60,8 +75,11 @@ namespace Bootstrap.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			// aapt resource value: 0x7f040000
+			public const int MvxBindingTagUnique = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int button1 = 2130968577;
 			
 			static Id()
 			{
@@ -77,7 +95,7 @@ namespace Bootstrap.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int View_Bootstrap = 2130903040;
 			
 			static Layout()
 			{
@@ -92,11 +110,11 @@ namespace Bootstrap.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int app_name = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int hello = 2131034112;
 			
 			static String()
 			{
@@ -104,6 +122,48 @@ namespace Bootstrap.Droid
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Styleable
+		{
+			
+			public static int[] MvxBinding = new int[]
+			{
+					2130771968,
+					2130771969};
+			
+			// aapt resource value: 0
+			public const int MvxBinding_MvxBind = 0;
+			
+			// aapt resource value: 1
+			public const int MvxBinding_MvxLang = 1;
+			
+			public static int[] MvxImageView = new int[]
+			{
+					2130771972};
+			
+			// aapt resource value: 0
+			public const int MvxImageView_MvxSource = 0;
+			
+			public static int[] MvxListView = new int[]
+			{
+					2130771970,
+					2130771971};
+			
+			// aapt resource value: 1
+			public const int MvxListView_MvxDropDownItemTemplate = 1;
+			
+			// aapt resource value: 0
+			public const int MvxListView_MvxItemTemplate = 0;
+			
+			static Styleable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Styleable()
 			{
 			}
 		}
