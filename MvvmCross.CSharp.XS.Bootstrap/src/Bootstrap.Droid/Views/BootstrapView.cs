@@ -4,7 +4,7 @@ namespace Bootstrap.Droid.Views
 	using Cirrious.MvvmCross.Droid.Views;
 	using Bootstrap.Core;
 
-	[Activity (Label = "Tip", MainLauncher = true)]
+	[Activity (Label = "Bootstrap", MainLauncher = true)]
 	public class TipView : MvxActivity
 	{
 		public new BootstrapViewModel ViewModel
