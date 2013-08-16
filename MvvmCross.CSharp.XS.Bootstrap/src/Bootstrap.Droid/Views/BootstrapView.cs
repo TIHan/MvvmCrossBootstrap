@@ -4,7 +4,7 @@ namespace Bootstrap.Droid.Views
 	using Cirrious.MvvmCross.Droid.Views;
 	using Bootstrap.Core;
 
-	[Activity(Label = "Tip", MainLauncher = true)]
+	[Activity (Label = "Tip", MainLauncher = true)]
 	public class TipView : MvxActivity
 	{
 		public new BootstrapViewModel ViewModel
@@ -13,10 +13,10 @@ namespace Bootstrap.Droid.Views
 			set { base.ViewModel = value; }
 		}
 
-		protected override void OnViewModelSet()
+		protected override void OnViewModelSet ()
 		{
-			base.OnViewModelSet();
-			SetContentView(Resource.Layout.View_Bootstrap);
+			base.OnViewModelSet ();
+			SetContentView (Resource.Layout.View_Bootstrap);
 		}
 	}
 }

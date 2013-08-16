@@ -80,9 +80,29 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="Cirrious.CrossCore.Touch">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.CrossCore.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding.Touch">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Touch">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.MvvmCross.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Views\" />
+    <Folder Include="Core\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -90,13 +110,20 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Bootstrap_iOSViewController.cs" />
-    <Compile Include="Bootstrap_iOSViewController.designer.cs">
-      <DependentUpon>Bootstrap_iOSViewController.cs</DependentUpon>
+    <Compile Include="Views\BootstrapView.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="..\Bootstrap.Core\App.cs">
+      <Link>Core\App.cs</Link>
+    </Compile>
+    <Compile Include="..\Bootstrap.Core\ViewModels\BootstrapViewModel.cs">
+      <Link>Core\BootstrapViewModel.cs</Link>
+    </Compile>
+    <Compile Include="Views\BootstrapView.designer.cs">
+      <DependentUpon>BootstrapView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="Bootstrap_iOSViewController.xib" />
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\BootstrapView.xib" />
+  </ItemGroup>
 </Project>

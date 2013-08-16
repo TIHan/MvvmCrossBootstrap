@@ -9,19 +9,19 @@ namespace Bootstrap.Droid
 
 	public class Setup : MvxAndroidSetup
 	{
-		public Setup(Context applicationContext) : base(applicationContext)
+		public Setup (Context applicationContext) : base (applicationContext)
 		{
 		}
 
-		protected override IMvxApplication CreateApp()
+		protected override IMvxApplication CreateApp ()
 		{
-			return new App();
+			return new App ();
 		}
 
-		protected override IMvxNavigationSerializer CreateNavigationSerializer()
+		protected override IMvxNavigationSerializer CreateNavigationSerializer ()
 		{
 			Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded ();
-			return new MvxJsonNavigationSerializer();
+			return new MvxJsonNavigationSerializer ();
 		}
 	}
 }
