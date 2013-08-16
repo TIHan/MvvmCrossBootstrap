@@ -13,6 +13,22 @@ namespace Bootstrap.Core
 			{
 				_clickCount = value;
 				RaisePropertyChanged (() => ClickCount);
+				RaisePropertyChanged (() => ClickText);
+			}
+		}
+
+		public string ClickText
+		{
+			get
+			{
+				if (ClickCount == 0)
+				{
+					return "MvvmCross Button";
+				}
+				else
+				{
+					return string.Format ("Clicked {0} times!", ClickCount);
+				}
 			}
 		}
 

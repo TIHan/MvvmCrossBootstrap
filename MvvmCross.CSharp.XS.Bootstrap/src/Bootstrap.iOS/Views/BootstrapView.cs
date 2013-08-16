@@ -19,6 +19,16 @@ namespace Bootstrap.iOS.Views
 		public BootstrapView () : base ("BootstrapView", null)
 		{
 		}
+
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+
+			var set = this.CreateBindingSet<BootstrapView, BootstrapViewModel> ();
+
+			set.Bind (Click).For ("TouchUpInside").To (vm => vm.ClickCommand).Apply ();
+			set.Bind (Click).For ("Title").To (vm => vm.ClickText).Apply ();
+		}
 	}
 }
 
