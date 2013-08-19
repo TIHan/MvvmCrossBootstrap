@@ -2,6 +2,7 @@ namespace Bootstrap.Core
 {
 	using System;
 	using Cirrious.MvvmCross.ViewModels;
+	using Cirrious.MvvmCross.Plugins.Messenger;
 
 	public class BootstrapViewModel : MvxViewModel
 	{
@@ -43,6 +44,13 @@ namespace Bootstrap.Core
 			{
 				return new MvxCommand (Click);
 			}
+		}
+
+		readonly IMvxMessenger _messenger;
+
+		public BootstrapViewModel (IMvxMessenger messenger) : base ()
+		{
+			_messenger = messenger;
 		}
 	}
 }

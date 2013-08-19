@@ -98,6 +98,9 @@
     <Reference Include="Cirrious.MvvmCross">
       <HintPath>..\..\lib\Mvx\Touch\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

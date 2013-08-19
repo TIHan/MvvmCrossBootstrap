@@ -8,6 +8,7 @@ namespace Bootstrap.Core
 		public App ()
 		{
 			Mvx.RegisterSingleton<IMvxAppStart> (new MvxAppStart<BootstrapViewModel> ());
+			Cirrious.MvvmCross.Plugins.Messenger.PluginLoader.Instance.EnsureLoaded ();
 		}
 	}
 }
