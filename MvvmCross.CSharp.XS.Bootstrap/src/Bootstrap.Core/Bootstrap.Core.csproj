@@ -45,7 +45,6 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
