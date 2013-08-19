@@ -84,6 +84,10 @@
     </Compile>
     <Compile Include="Setup.cs" />
     <Compile Include="Views\BootstrapView.cs" />
+    <Compile Include="..\Bootstrap.Core\ViewModels\NewViewModel.cs">
+      <Link>Core\NewViewModel.cs</Link>
+    </Compile>
+    <Compile Include="Views\NewView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -95,6 +99,7 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\layout\View_Bootstrap.axml" />
+    <AndroidResource Include="Resources\layout\View_New.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

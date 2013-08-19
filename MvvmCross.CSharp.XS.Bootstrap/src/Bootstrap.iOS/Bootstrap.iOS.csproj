@@ -124,9 +124,17 @@
     <Compile Include="Views\BootstrapView.designer.cs">
       <DependentUpon>BootstrapView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewView.cs" />
+    <Compile Include="Views\NewView.designer.cs">
+      <DependentUpon>NewView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Bootstrap.Core\ViewModels\NewViewModel.cs">
+      <Link>Core\NewViewModel.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <InterfaceDefinition Include="Views\BootstrapView.xib" />
+    <InterfaceDefinition Include="Views\NewView.xib" />
   </ItemGroup>
 </Project>

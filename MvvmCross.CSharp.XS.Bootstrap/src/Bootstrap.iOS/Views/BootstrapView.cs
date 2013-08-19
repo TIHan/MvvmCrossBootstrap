@@ -26,8 +26,8 @@ namespace Bootstrap.iOS.Views
 
 			var set = this.CreateBindingSet<BootstrapView, BootstrapViewModel> ();
 
-			set.Bind (Click).For ("TouchUpInside").To (vm => vm.ClickCommand).Apply ();
-			set.Bind (Click).For ("Title").To (vm => vm.ClickText).Apply ();
+			set.Bind (Click).For ("TouchUpInside").To ("ClickCommand").Apply ();
+			set.Bind (Click).For ("Title").To ("ClickText").Apply ();
 		}
 	}
 }
