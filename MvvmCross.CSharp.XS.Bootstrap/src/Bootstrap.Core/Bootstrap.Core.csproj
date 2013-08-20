@@ -52,6 +52,6 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\BootstrapViewModel.cs" />
-    <Compile Include="ViewModels\NewViewModel.cs" />
+    <Compile Include="ViewModels\NavigateViewModel.cs" />
   </ItemGroup>
 </Project>

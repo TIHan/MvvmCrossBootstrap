@@ -5,19 +5,19 @@ namespace Bootstrap.Droid.Views
 	using Cirrious.MvvmCross.Binding.BindingContext;
 	using Bootstrap.Core;
 
-	[Activity (Label = "New")]
-	public class NewView : MvxActivity
+	[Activity (Label = "Navigate")]
+	public class NavigateView : MvxActivity
 	{
-		public new NewViewModel ViewModel
+		public new NavigateViewModel ViewModel
 		{
-			get { return (NewViewModel) base.ViewModel; }
+			get { return (NavigateViewModel) base.ViewModel; }
 			set { base.ViewModel = value; }
 		}
 
 		protected override void OnViewModelSet ()
 		{
 			base.OnViewModelSet ();
-			SetContentView (Resource.Layout.View_New);
+			SetContentView (Resource.Layout.View_Navigate);
 		}
 	}
 }

@@ -28,6 +28,7 @@ namespace Bootstrap.iOS.Views
 
 			set.Bind (Click).For ("TouchUpInside").To ("ClickCommand").Apply ();
 			set.Bind (Click).For ("Title").To ("ClickText").Apply ();
+			set.Bind (GoToNavigate).For ("TouchUpInside").To ("GoToNavigateCommand").Apply ();
 		}
 	}
 }

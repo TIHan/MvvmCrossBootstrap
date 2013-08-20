@@ -124,17 +124,20 @@
     <Compile Include="Views\BootstrapView.designer.cs">
       <DependentUpon>BootstrapView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\NewView.cs" />
-    <Compile Include="Views\NewView.designer.cs">
-      <DependentUpon>NewView.cs</DependentUpon>
+    <Compile Include="..\Bootstrap.Core\ViewModels\NavigateViewModel.cs">
+      <Link>Core\NavigateViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\Bootstrap.Core\ViewModels\NewViewModel.cs">
-      <Link>Core\NewViewModel.cs</Link>
+    <Compile Include="Views\NavigateView.cs" />
+    <Compile Include="Views\NavigateView.designer.cs">
+      <DependentUpon>NavigateView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <InterfaceDefinition Include="Views\BootstrapView.xib" />
-    <InterfaceDefinition Include="Views\NewView.xib" />
+    <InterfaceDefinition Include="Views\NavigateView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\.DS_Store" />
   </ItemGroup>
 </Project>

@@ -29,6 +29,8 @@ namespace Bootstrap.iOS
 			var startup = Mvx.Resolve<IMvxAppStart> ();
 			startup.Start ();
 
+			// Hide Navigation Bar
+			presenter.MasterNavigationController.SetNavigationBarHidden (true, false);
 			window.MakeKeyAndVisible ();
 
 			return true;

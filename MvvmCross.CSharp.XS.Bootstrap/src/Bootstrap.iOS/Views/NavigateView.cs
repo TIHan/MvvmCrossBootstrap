@@ -8,22 +8,25 @@ namespace Bootstrap.iOS.Views
 	using Cirrious.MvvmCross.Binding.BindingContext;
 	using Bootstrap.Core;
 
-	public partial class NewView : MvxViewController
+	public partial class NavigateView : MvxViewController
 	{
-		public new NewViewModel ViewModel
+		public new NavigateViewModel ViewModel
 		{
-			get { return (NewViewModel)base.ViewModel; }
+			get { return (NavigateViewModel)base.ViewModel; }
 			set { base.ViewModel = value; }
 		}
 
-		public NewView () : base ("NewView", null)
+		public NavigateView () : base ("NavigateView", null)
 		{
 		}
 
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+
+			var set = this.CreateBindingSet<NavigateView, NavigateViewModel> ();
+
+			set.Bind (GoBack).For ("TouchUpInside").To ("GoBackCommand").Apply ();
 		}
 	}
 }
-

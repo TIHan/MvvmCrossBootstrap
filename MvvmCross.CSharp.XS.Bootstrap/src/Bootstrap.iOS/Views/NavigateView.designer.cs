@@ -9,25 +9,25 @@ using System.CodeDom.Compiler;
 
 namespace Bootstrap.iOS.Views
 {
-	[Register ("BootstrapView")]
-	partial class BootstrapView
+	[Register ("NavigateView")]
+	partial class NavigateView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIButton Click { get; set; }
+		MonoTouch.UIKit.UIButton GoBack { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton GoToNavigate { get; set; }
+		MonoTouch.UIKit.UIButton SendMessage { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (Click != null) {
-				Click.Dispose ();
-				Click = null;
+			if (SendMessage != null) {
+				SendMessage.Dispose ();
+				SendMessage = null;
 			}
 
-			if (GoToNavigate != null) {
-				GoToNavigate.Dispose ();
-				GoToNavigate = null;
+			if (GoBack != null) {
+				GoBack.Dispose ();
+				GoBack = null;
 			}
 		}
 	}

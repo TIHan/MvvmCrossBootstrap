@@ -46,6 +46,19 @@ namespace Bootstrap.Core
 			}
 		}
 
+		public void GoToNavigate ()
+		{
+			ShowViewModel<NavigateViewModel> ();
+		}
+
+		public IMvxCommand GoToNavigateCommand
+		{
+			get
+			{
+				return new MvxCommand (GoToNavigate);
+			}
+		}
+
 		readonly IMvxMessenger _messenger;
 
 		public BootstrapViewModel (IMvxMessenger messenger) : base ()
