@@ -18,4 +18,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/GoToNavigate"
         local:MvxBind="Click GoToNavigateCommand" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EnterText"
+        local:MvxBind="Text EnterText" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DisplayText"
+        local:MvxBind="Text EnterText" />
 </LinearLayout>
