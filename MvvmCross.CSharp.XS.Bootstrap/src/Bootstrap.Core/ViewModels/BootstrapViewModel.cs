@@ -59,6 +59,17 @@ namespace Bootstrap.Core
 			}
 		}
 
+		string _enterText;
+		public string EnterText
+		{
+			get { return _enterText; }
+			set
+			{
+				_enterText = value;
+				RaisePropertyChanged (() => EnterText);
+			}
+		}
+
 		readonly IMvxMessenger _messenger;
 
 		readonly MvxSubscriptionToken _sendMessageClickedToken;

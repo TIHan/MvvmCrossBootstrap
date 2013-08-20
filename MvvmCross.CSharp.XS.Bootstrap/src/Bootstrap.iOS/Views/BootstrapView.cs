@@ -8,6 +8,15 @@ namespace Bootstrap.iOS.Views
 	using Cirrious.MvvmCross.Binding.BindingContext;
 	using Bootstrap.Core;
 
+	class EnterTextDelegate : UITextFieldDelegate
+	{
+		public override bool ShouldReturn (UITextField textField)
+		{
+			textField.ResignFirstResponder ();
+			return false;
+		}
+	}
+
 	public partial class BootstrapView : MvxViewController
 	{
 		public new BootstrapViewModel ViewModel
@@ -24,11 +33,15 @@ namespace Bootstrap.iOS.Views
 		{
 			base.ViewDidLoad ();
 
+			EnterText.Delegate = new EnterTextDelegate ();
+
 			var set = this.CreateBindingSet<BootstrapView, BootstrapViewModel> ();
 
 			set.Bind (Click).For ("TouchUpInside").To ("ClickCommand").Apply ();
 			set.Bind (Click).For ("Title").To ("ClickText").Apply ();
 			set.Bind (GoToNavigate).For ("TouchUpInside").To ("GoToNavigateCommand").Apply ();
+			set.Bind (EnterText).To ("EnterText").Apply ();
+			set.Bind (DisplayText).For ("Text").To ("EnterText").Apply ();
 		}
 	}
 }

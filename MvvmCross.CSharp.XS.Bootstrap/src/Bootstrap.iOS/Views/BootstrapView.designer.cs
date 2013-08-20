@@ -16,6 +16,12 @@ namespace Bootstrap.iOS.Views
 		MonoTouch.UIKit.UIButton Click { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UILabel DisplayText { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UITextField EnterText { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIButton GoToNavigate { get; set; }
 		
 		void ReleaseDesignerOutlets ()
@@ -28,6 +34,16 @@ namespace Bootstrap.iOS.Views
 			if (GoToNavigate != null) {
 				GoToNavigate.Dispose ();
 				GoToNavigate = null;
+			}
+
+			if (EnterText != null) {
+				EnterText.Dispose ();
+				EnterText = null;
+			}
+
+			if (DisplayText != null) {
+				DisplayText.Dispose ();
+				DisplayText = null;
 			}
 		}
 	}
