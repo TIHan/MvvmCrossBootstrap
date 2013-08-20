@@ -26,6 +26,7 @@ namespace Bootstrap.iOS.Views
 
 			var set = this.CreateBindingSet<NavigateView, NavigateViewModel> ();
 
+			set.Bind (SendMessage).For ("TouchUpInside").To ("SendMessageCommand").Apply ();
 			set.Bind (GoBack).For ("TouchUpInside").To ("GoBackCommand").Apply ();
 		}
 	}

@@ -61,9 +61,15 @@ namespace Bootstrap.Core
 
 		readonly IMvxMessenger _messenger;
 
+		readonly MvxSubscriptionToken _sendMessageClickedToken;
+
 		public BootstrapViewModel (IMvxMessenger messenger) : base ()
 		{
 			_messenger = messenger;
+
+			_sendMessageClickedToken = _messenger.Subscribe<SendMessageClicked> (msg => {
+				Click ();
+			});
 		}
 	}
 }

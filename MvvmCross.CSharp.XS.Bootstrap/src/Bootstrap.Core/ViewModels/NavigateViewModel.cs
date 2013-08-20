@@ -4,8 +4,28 @@ namespace Bootstrap.Core
 	using Cirrious.MvvmCross.ViewModels;
 	using Cirrious.MvvmCross.Plugins.Messenger;
 
+	public class SendMessageClicked : MvxMessage
+	{
+		public SendMessageClicked (object sender) : base (sender)
+		{
+		}
+	}
+
 	public class NavigateViewModel : MvxViewModel
 	{
+		public void SendMessage ()
+		{
+			_messenger.Publish (new SendMessageClicked (this));
+		}
+
+		public IMvxCommand SendMessageCommand
+		{
+			get
+			{
+				return new MvxCommand (SendMessage);
+			}
+		}
+
 		public void GoBack ()
 		{
 			Close (this);
