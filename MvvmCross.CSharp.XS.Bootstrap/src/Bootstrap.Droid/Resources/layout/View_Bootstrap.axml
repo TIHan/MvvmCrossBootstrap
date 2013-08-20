@@ -12,4 +12,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/Click"
         local:MvxBind="Click ClickCommand;Text ClickText" />
+    <Button
+        android:text="Go to Navigate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/GoToNavigate"
+        local:MvxBind="Click GoToNavigateCommand" />
 </LinearLayout>

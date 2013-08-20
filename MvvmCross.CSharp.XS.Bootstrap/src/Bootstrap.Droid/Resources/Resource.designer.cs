@@ -78,8 +78,17 @@ namespace Bootstrap.Droid
 			// aapt resource value: 0x7f040001
 			public const int Click = 2130968577;
 			
+			// aapt resource value: 0x7f040004
+			public const int GoBack = 2130968580;
+			
+			// aapt resource value: 0x7f040002
+			public const int GoToNavigate = 2130968578;
+			
 			// aapt resource value: 0x7f040000
 			public const int MvxBindingTagUnique = 2130968576;
+			
+			// aapt resource value: 0x7f040003
+			public const int SendMessage = 2130968579;
 			
 			static Id()
 			{
