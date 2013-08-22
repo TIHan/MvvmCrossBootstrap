@@ -96,6 +96,7 @@ namespace Bootstrap.Core
 
 			Items = new ObservableCollection<ItemViewModel> ();
 			Items.Add (new ItemViewModel ());
+			Items.Add (new ItemViewModel ());
 		}
 	}
 }

@@ -16,10 +16,17 @@ namespace Bootstrap.iOS.Views
 
 		public ItemView (IntPtr handle) : base (handle)
 		{
-			//var set = this.CreateBindingSet<ItemView, ItemViewModel> ();
+			this.DelayBind (() => {
+				var set = this.CreateBindingSet<ItemView, ItemViewModel> ();
 
-			//set.Bind (Text).To ("Text").Apply ();
-			var hey = Text;
+				set.Bind ().For ("TextText").To ("Text").Apply ();
+			});
+		}
+
+		public string TextText
+		{
+			get { return Text.Text; }
+			set { Text.Text = value; }
 		}
 
 		public static ItemView Create ()

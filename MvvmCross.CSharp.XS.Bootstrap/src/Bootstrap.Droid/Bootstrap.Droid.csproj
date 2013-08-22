@@ -88,6 +88,9 @@
       <Link>Core\NavigateViewModel.cs</Link>
     </Compile>
     <Compile Include="Views\NavigateView.cs" />
+    <Compile Include="..\Bootstrap.Core\ViewModels\ItemViewModel.cs">
+      <Link>Core\ItemViewModel.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
