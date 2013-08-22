@@ -103,6 +103,7 @@
     <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\layout\View_Bootstrap.axml" />
     <AndroidResource Include="Resources\layout\View_Navigate.axml" />
+    <AndroidResource Include="Resources\layout\View_Item.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

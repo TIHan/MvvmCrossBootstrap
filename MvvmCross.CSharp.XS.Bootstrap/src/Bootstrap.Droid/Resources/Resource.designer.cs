@@ -84,17 +84,23 @@ namespace Bootstrap.Droid
 			// aapt resource value: 0x7f040003
 			public const int EnterText = 2130968579;
 			
-			// aapt resource value: 0x7f040006
-			public const int GoBack = 2130968582;
+			// aapt resource value: 0x7f040008
+			public const int GoBack = 2130968584;
 			
 			// aapt resource value: 0x7f040002
 			public const int GoToNavigate = 2130968578;
 			
+			// aapt resource value: 0x7f040005
+			public const int ItemList = 2130968581;
+			
 			// aapt resource value: 0x7f040000
 			public const int MvxBindingTagUnique = 2130968576;
 			
-			// aapt resource value: 0x7f040005
-			public const int SendMessage = 2130968581;
+			// aapt resource value: 0x7f040007
+			public const int SendMessage = 2130968583;
+			
+			// aapt resource value: 0x7f040006
+			public const int Text = 2130968582;
 			
 			static Id()
 			{
@@ -113,7 +119,10 @@ namespace Bootstrap.Droid
 			public const int View_Bootstrap = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int View_Navigate = 2130903041;
+			public const int View_Item = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int View_Navigate = 2130903042;
 			
 			static Layout()
 			{

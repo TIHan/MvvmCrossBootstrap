@@ -28,4 +28,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/DisplayText"
         local:MvxBind="Text EnterText" />
+    <Mvx.MvxListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ItemList"
+        local:MvxItemTemplate="@layout/view_item"
+        local:MvxBind="ItemsSource Items" />
 </LinearLayout>
