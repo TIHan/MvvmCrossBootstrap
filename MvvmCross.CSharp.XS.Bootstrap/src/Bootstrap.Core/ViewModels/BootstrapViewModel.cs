@@ -1,6 +1,7 @@
 namespace Bootstrap.Core
 {
 	using System;
+	using System.Collections.ObjectModel;
 	using Cirrious.MvvmCross.ViewModels;
 	using Cirrious.MvvmCross.Plugins.Messenger;
 
@@ -70,6 +71,17 @@ namespace Bootstrap.Core
 			}
 		}
 
+		ObservableCollection<ItemViewModel> _items;
+		public ObservableCollection<ItemViewModel> Items
+		{
+			get { return _items; }
+			set
+			{
+				_items = value;
+				RaisePropertyChanged (() => Items);
+			}
+		}
+
 		readonly IMvxMessenger _messenger;
 
 		readonly MvxSubscriptionToken _sendMessageClickedToken;
@@ -81,6 +93,9 @@ namespace Bootstrap.Core
 			_sendMessageClickedToken = _messenger.Subscribe<SendMessageClicked> (msg => {
 				Click ();
 			});
+
+			Items = new ObservableCollection<ItemViewModel> ();
+			Items.Add (new ItemViewModel ());
 		}
 	}
 }

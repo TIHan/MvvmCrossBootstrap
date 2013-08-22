@@ -23,6 +23,9 @@ namespace Bootstrap.iOS.Views
 
 		[Outlet]
 		MonoTouch.UIKit.UIButton GoToNavigate { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UITableView ItemList { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -31,9 +34,9 @@ namespace Bootstrap.iOS.Views
 				Click = null;
 			}
 
-			if (GoToNavigate != null) {
-				GoToNavigate.Dispose ();
-				GoToNavigate = null;
+			if (DisplayText != null) {
+				DisplayText.Dispose ();
+				DisplayText = null;
 			}
 
 			if (EnterText != null) {
@@ -41,9 +44,14 @@ namespace Bootstrap.iOS.Views
 				EnterText = null;
 			}
 
-			if (DisplayText != null) {
-				DisplayText.Dispose ();
-				DisplayText = null;
+			if (GoToNavigate != null) {
+				GoToNavigate.Dispose ();
+				GoToNavigate = null;
+			}
+
+			if (ItemList != null) {
+				ItemList.Dispose ();
+				ItemList = null;
 			}
 		}
 	}

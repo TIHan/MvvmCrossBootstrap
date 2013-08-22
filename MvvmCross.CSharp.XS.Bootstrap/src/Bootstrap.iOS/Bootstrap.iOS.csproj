@@ -131,11 +131,19 @@
     <Compile Include="Views\NavigateView.designer.cs">
       <DependentUpon>NavigateView.cs</DependentUpon>
     </Compile>
+    <Compile Include="..\Bootstrap.Core\ViewModels\ItemViewModel.cs">
+      <Link>Core\ItemViewModel.cs</Link>
+    </Compile>
+    <Compile Include="Views\ItemView.cs" />
+    <Compile Include="Views\ItemView.designer.cs">
+      <DependentUpon>ItemView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <InterfaceDefinition Include="Views\BootstrapView.xib" />
     <InterfaceDefinition Include="Views\NavigateView.xib" />
+    <InterfaceDefinition Include="Views\ItemView.xib" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\.DS_Store" />
