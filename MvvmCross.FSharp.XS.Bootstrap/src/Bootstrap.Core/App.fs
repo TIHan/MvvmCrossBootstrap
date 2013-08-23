@@ -8,3 +8,4 @@ type App () =
     
     do
         Mvx.RegisterSingleton<IMvxAppStart> (MvxAppStart<BootstrapViewModel> ())
+        Cirrious.MvvmCross.Plugins.Messenger.PluginLoader.Instance.EnsureLoaded ()

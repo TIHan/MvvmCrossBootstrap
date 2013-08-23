@@ -40,7 +40,7 @@ type Bootstrap =
         ClickCount : int;
     }  
 
-type BootstrapViewModel () as this = 
+type BootstrapViewModel () = 
     inherit MvxViewModel () 
     
     let agent = SimpleAgent.StartNew (Unchecked.defaultof<Bootstrap>) (fun state msg ->
@@ -54,6 +54,7 @@ type BootstrapViewModel () as this =
             { state with ClickCount = clickCount }
     )
 
+
     member this.ClickCount
         with get () = agent.PostAndReply (fun x -> GetClickCount x)
         and private set value =
@@ -66,13 +67,12 @@ type BootstrapViewModel () as this =
             match this.ClickCount with
             | 0 -> "MvvmCross Button"
             | x -> sprintf "Clicked %i times!" x
-            
-           
-    member this.Click () =
-        this.ClickCount <- this.ClickCount + 1
+
         
     member this.ClickCommand
-        with get () = MvxCommand (fun () -> this.Click ())
+        with get () = MvxCommand (fun () ->
+            this.ClickCount <- this.ClickCount + 1
+        )
         
     
             

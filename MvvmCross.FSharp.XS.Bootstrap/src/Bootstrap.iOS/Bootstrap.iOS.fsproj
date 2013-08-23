@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0E9DC100-2034-4DA9-8F5E-9ED6F9B25EEE}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{4925A630-B079-445D-BCD4-3A9C94FE9307}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Bootstrap.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>BootstrapiOS</AssemblyName>
+    <BuildOrder>
+      <BuildOrder>
+        <String>../Bootstrap.Core/ViewModels.fs</String>
+        <String>../Bootstrap.Core/App.fs</String>
+        <String>Views.fs</String>
+        <String>AppDelegate.fs</String>
+      </BuildOrder>
+    </BuildOrder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <MtouchLink>None</MtouchLink>
+    <PlatformTarget />
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget />
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <Tailcalls>true</Tailcalls>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <MtouchDebug>true</MtouchDebug>
+    <PlatformTarget />
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget />
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <ConsolePause>false</ConsolePause>
+    <Tailcalls>true</Tailcalls>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget />
+    <BuildIpa>true</BuildIpa>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <ConsolePause>false</ConsolePause>
+    <Tailcalls>true</Tailcalls>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget />
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <ConsolePause>false</ConsolePause>
+    <Tailcalls>true</Tailcalls>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="FSharp.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="Cirrious.CrossCore.Touch">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.CrossCore.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding.Touch">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Touch">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.MvvmCross.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\..\lib\Mvx\Touch\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\lib\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Core\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.fs" />
+    <Compile Include="..\Bootstrap.Core\ViewModels.fs">
+      <Link>Core\ViewModels.fs</Link>
+    </Compile>
+    <Compile Include="..\Bootstrap.Core\App.fs">
+      <Link>Core\App.fs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Bootstrap.iOS.UI\Bootstrap.iOS.UI.csproj">
+      <Project>{76277CEE-BA5E-49D1-8253-2FAE3EAAC760}</Project>
+      <Name>Bootstrap.iOS.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
