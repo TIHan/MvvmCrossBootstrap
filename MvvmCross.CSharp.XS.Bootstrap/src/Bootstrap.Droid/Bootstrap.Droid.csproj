@@ -91,6 +91,9 @@
     <Compile Include="..\Bootstrap.Core\ViewModels\ItemViewModel.cs">
       <Link>Core\ItemViewModel.cs</Link>
     </Compile>
+    <Compile Include="..\Bootstrap.Core\ViewModels\SubViewModel.cs">
+      <Link>Core\SubViewModel.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

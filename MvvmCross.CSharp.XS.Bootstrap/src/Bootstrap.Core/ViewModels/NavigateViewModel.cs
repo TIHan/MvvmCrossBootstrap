@@ -39,11 +39,23 @@ namespace Bootstrap.Core
 			}
 		}
 
+		SubViewModel _sub;
+		public SubViewModel Sub
+		{
+			get { return _sub; }
+			set
+			{
+				_sub = value;
+				RaisePropertyChanged (() => Sub);
+			}
+		}
+
 		readonly IMvxMessenger _messenger;
 
 		public  NavigateViewModel (IMvxMessenger messenger) : base ()
 		{
 			_messenger = messenger;
+			_sub = new SubViewModel ();
 		}
 	}
 }
