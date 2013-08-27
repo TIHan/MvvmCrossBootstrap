@@ -17,17 +17,25 @@ namespace Bootstrap.iOS.Views
 
 		[Outlet]
 		MonoTouch.UIKit.UIButton SendMessage { get; set; }
+
+		[Outlet]
+		Bootstrap.iOS.Views.SubView Sub { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (GoBack != null) {
+				GoBack.Dispose ();
+				GoBack = null;
+			}
+
 			if (SendMessage != null) {
 				SendMessage.Dispose ();
 				SendMessage = null;
 			}
 
-			if (GoBack != null) {
-				GoBack.Dispose ();
-				GoBack = null;
+			if (Sub != null) {
+				Sub.Dispose ();
+				Sub = null;
 			}
 		}
 	}

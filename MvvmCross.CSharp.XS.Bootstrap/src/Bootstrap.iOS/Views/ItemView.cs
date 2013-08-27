@@ -19,7 +19,8 @@ namespace Bootstrap.iOS.Views
 			this.DelayBind (() => {
 				var set = this.CreateBindingSet<ItemView, ItemViewModel> ();
 
-				set.Bind ().For ("TextText").To ("Text").Apply ();
+				set.Bind ().For ("TextText").To ("Text");
+				set.Apply ();
 			});
 		}
 

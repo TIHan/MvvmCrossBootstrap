@@ -34,12 +34,13 @@ namespace Bootstrap.iOS.Views
 
 			var set = this.CreateBindingSet<BootstrapView, BootstrapViewModel> ();
 
-			set.Bind (Click).For ("TouchUpInside").To ("ClickCommand").Apply ();
-			set.Bind (Click).For ("Title").To ("ClickText").Apply ();
-			set.Bind (GoToNavigate).For ("TouchUpInside").To ("GoToNavigateCommand").Apply ();
-			set.Bind (EnterText).To ("EnterText").Apply ();
-			set.Bind (DisplayText).For ("Text").To ("EnterText").Apply ();
-			set.Bind (itemListSource).For ("ItemsSource").To ("Items").Apply ();
+			set.Bind (Click).For ("TouchUpInside").To ("ClickCommand");
+			set.Bind (Click).For ("Title").To ("ClickText");
+			set.Bind (GoToNavigate).For ("TouchUpInside").To ("GoToNavigateCommand");
+			set.Bind (EnterText).To ("EnterText");
+			set.Bind (DisplayText).For ("Text").To ("EnterText");
+			set.Bind (itemListSource).For ("ItemsSource").To ("Items");
+			set.Apply ();
 
 			ItemList.Source = itemListSource;
 			ItemList.ReloadData ();

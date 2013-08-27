@@ -141,6 +141,7 @@
     <Compile Include="..\Bootstrap.Core\ViewModels\SubViewModel.cs">
       <Link>Core\SubViewModel.cs</Link>
     </Compile>
+    <Compile Include="Views\SubView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
