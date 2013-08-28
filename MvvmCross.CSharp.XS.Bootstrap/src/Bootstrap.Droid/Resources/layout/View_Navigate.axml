@@ -16,4 +16,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/GoBack"
         local:MvxBind="Click GoBackCommand" />
+    <include
+        android:id="@+id/Sub"
+        layout="@layout/View_Sub" />
 </LinearLayout>
