@@ -16,7 +16,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/GoBack"
         local:MvxBind="Click GoBackCommand" />
-    <include
+    <MvxLinearLayout
         android:id="@+id/Sub"
-        layout="@layout/View_Sub" />
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <TextView
+            android:text="not bound"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text"
+            local:MvxBind="Text Sub.Text" />
+    </MvxLinearLayout>
 </LinearLayout>

@@ -99,14 +99,11 @@ namespace Bootstrap.Droid
 			// aapt resource value: 0x7f040007
 			public const int SendMessage = 2130968583;
 			
-			// aapt resource value: 0x7f04000a
-			public const int Sub = 2130968586;
+			// aapt resource value: 0x7f040009
+			public const int Sub = 2130968585;
 			
 			// aapt resource value: 0x7f040006
 			public const int Text = 2130968582;
-			
-			// aapt resource value: 0x7f040009
-			public const int linearLayout1 = 2130968585;
 			
 			static Id()
 			{
@@ -129,9 +126,6 @@ namespace Bootstrap.Droid
 			
 			// aapt resource value: 0x7f030002
 			public const int View_Navigate = 2130903042;
-			
-			// aapt resource value: 0x7f030003
-			public const int View_Sub = 2130903043;
 			
 			static Layout()
 			{
